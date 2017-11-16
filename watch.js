@@ -1,43 +1,24 @@
 var todos = ['item 1', 'item 2', 'item 3'];
 
+// It should have a function to display todos.
+function displayTodos () {
+    console.log('My todos:', todos);
+}
 
-undefined
-todos
-(3) ["item 1", "item 2", "item 3"]
-console.log ('hello there', 'gordon');
-VM72:1 hello there gordon
-undefined
-todos.push('item 4');
-4
-todos
-(4) ["item 1", "item 2", "item 3", "item 4"]
-todos.push('item 5');
-5
-todos
-(5) ["item 1", "item 2", "item 3", "item 4", "item 5"]
-todos[0]
-"item 1"
-todos[1]
-"item 2"
-todos[2]
-"item 3"
-todos[4]
-"item 5"
-todos[5]
-undefined
-todos[0] = 'item 1 updated'
-"item 1 updated"
-todos[0]
-"item 1 updated"
-todos
-(5) ["item 1 updated", "item 2", "item 3", "item 4", "item 5"]
-todos.splice(0, 1);
-["item 1 updated"]
-todos
-(4) ["item 2", "item 3", "item 4", "item 5"]
-todos.splice(3, 1);
-["item 5"]
-todos
-(3) ["item 2", "item 3", "item 4"]
-todos.splice(3, 1);
-[]
+// It should have a function to add todos. 
+function addTodo (todo) {
+    todos.push(todo);
+    displayTodos();
+}
+
+// It should have a function to change todos.
+function changeToDo (position, newValue) {
+    todos[position] = newValue;
+    displayTodos();
+}
+
+// It should have a function to delete todos.
+function deleteToDo (position) {
+    todos.splice(position, 1);
+    displayTodos();
+}
