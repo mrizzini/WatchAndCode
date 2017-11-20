@@ -57,10 +57,15 @@ var todoList = {
   }
 };
 
+var displayTodosButton = document.getElementById('displayTodosButton');
 
-todoList.addTodo('first');
-todoList.addTodo('second');
-todoList.addTodo('third');
-todoList.toggleCompleted(0);
-todoList.toggleAll();
+displayTodosButton.addEventListener('click', function () {
+  todoList.displayTodos();
+});
 
+
+var toggleAllButton = document.getElementById('toggleAllButton');
+
+toggleAllButton.addEventListener('click', function () {
+  todoList.toggleAll();
+})
